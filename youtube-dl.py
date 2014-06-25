@@ -1,7 +1,7 @@
 import json
 from flask import Flask, request, jsonify, render_template
 from flask.helpers import make_response
-from modulos import pafy
+import pafy
 
 
 app = Flask(__name__)
