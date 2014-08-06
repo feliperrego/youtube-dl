@@ -31,9 +31,7 @@ $("#frm").validate({
 
                     $(".videoinfo .video-url")
                         .attr("href", "")
-                        .attr('href', data.video.url)
-                        .attr("download", "")
-                        .attr('download', data.video.url);
+                        .attr('href', data.video.url);
 
                     $(".videoinfo .video-title")
                         .empty()
@@ -45,7 +43,7 @@ $("#frm").validate({
                         .append("<p> Duration: " + data.video.duration + "</p>");
 
                     for(i=0; i < data.video.streams.length; i++){
-                        $(".videoinfo .clearfix").append('<a target="_blank" href="' + data.video.streams[i][3] + '">' + data.video.streams[i][0] + '(' + data.video.streams[i][1] +')</a> | ');
+                        $(".videoinfo .clearfix").append('<a target="_blank" href="' + data.video.streams[i][3] + '" download="' + data.video.streams[i][3] + '">' + data.video.streams[i][0] + '(' + data.video.streams[i][1] +')</a> | ');
                     }
 
                     $(".videoinfo-cont").fadeIn();
