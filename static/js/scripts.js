@@ -31,7 +31,9 @@ $("#frm").validate({
 
                     $(".videoinfo .video-url")
                         .attr("href", "")
-                        .attr('href', data.video.url);
+                        .attr('href', data.video.url)
+                        .attr("download", "")
+                        .attr('download', data.video.url);
 
                     $(".videoinfo .video-title")
                         .empty()
